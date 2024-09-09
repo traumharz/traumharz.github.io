@@ -1,1 +1,8 @@
-img/portfolio/originals
+*.gem
+.bundle
+.sass-cache
+.jekyll-cache
+_site
+Gemfile.lock
+unused
+bootstrap-reference.html

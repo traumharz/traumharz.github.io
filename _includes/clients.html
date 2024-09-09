@@ -1,0 +1,43 @@
+<!-- Clients -->
+{% if site.locale and site.locale != "" and site.locale != nil %}
+  <section class="py-1 text-center text-secondary" id="{{ site.data.sitetext[site.locale].clients.section | default: "clients" }}">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-3 col-sm-6">
+                      <i class="fa fa-envelope fa-2x"></i><br />
+                        <a href="mailto:someone@example.com" style="color: #6c757d;" target="_top">someone@example.com</a>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <i class="fa fa-phone fa-2x"></i><br />
+                    +31 (0) 475 - xxxxxx
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <i class="fa fa-mobile fa-2x"></i><br />
+                    +31 (0) 6 - xxxxxxxx
+                  </div>
+                  <div class="col-md-3 col-sm-6 small">
+                    <i class="fa fa-home fa-2x"></i><br />
+                    An der Rolle 1<br />
+                    37444<br />
+                    Sankt Andreasberg<br />
+                    Germany
+                  </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% else %}
+<section class="py-5" id="{{ site.data.sitetext.clients.section | default: "clients" }}">
+  <div class="container">
+    <div class="row" {% if site.data.sitetext.clients.horizontal-scrolling == "yes" %} id="scrolling-clients" {% endif %}>
+    {% for client in site.data.sitetext.clients.list %}
+      <div class="col-md-3 col-sm-6">
+        <a href="{{ client.url }}">
+          <img class="img-fluid d-block mx-auto" src="{{ client.logo }}" alt="{{ client.title }}" style="max-height: {{ site.data.sitetext.clients.max-height | default: "100px" }}">
+        </a>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

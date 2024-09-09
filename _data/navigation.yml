@@ -1,0 +1,73 @@
+#
+# Work based on https://github.com/mmistakes/minimal-mistakes/blob/master/_data/ui-text.yml
+#
+# Configuration: Add to _config.yml
+# locale: "en-US"  [YOUR PREFERRED LOCALE]
+#
+# How to use:
+# {{ site.data.navigation[site.locale].nav.<var_name> | default: 'text' }}
+
+# English (default)
+# -----------------
+en: &DEFAULT_EN
+  nav:
+    - title: "Amenities"
+      section: amenities
+    - title: "Gallery"
+      section: portfolio
+    - title: "About"
+      section: about
+    - title: "Prices"
+      section: prices
+    - title: "Team"
+      section: team
+    - title: "Contact"
+      section: clients
+en-US:
+  <<: *DEFAULT_EN
+en-CA:
+  <<: *DEFAULT_EN
+en-GB:
+  <<: *DEFAULT_EN
+en-AU:
+  <<: *DEFAULT_EN
+
+# Dutch
+# -------
+nl: &DEFAULT_NL
+  nav:
+    - title: "Amenities"
+      section: amenities
+    - title: "Gallery"
+      section: gallery
+    - title: "About"
+      section: about
+    - title: "Prijzen"
+      section: prijzen
+    - title: "Team"
+      section: team
+    - title: "Contact"
+      section: contact
+nl-NL:
+  <<: *DEFAULT_NL
+nl-BE:
+  <<: *DEFAULT_NL
+
+# Deutsch
+# -----------------
+de: &DEFAULT_DE
+  nav:
+    - title: "Leistungen"
+      section: Leistungen
+    - title: "Portfolio"
+      section: Portfolio
+    - title: "Über uns"
+      section: Ueber
+    - title: "Geschichte"
+      section: Geschichte
+    - title: "Team"
+      section: Team
+    - title: "Kontakt"
+      section: Kontakt
+de-DE:
+  <<: *DEFAULT_DE
